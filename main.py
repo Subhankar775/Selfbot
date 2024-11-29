@@ -113,14 +113,6 @@ async def on_message(message):
     global delete_bot_messages
     global nitrosniping
     global giveawaysniping
-    if message.author.id == chanwlc:
-        if message.mentions:
-            for user in message.mentions:
-                await message.channel.send(f"**Welcome {user.mention} :dil: qt!**")
-        else:
-            return
-    else:
-        return
     for trigger, response in auto_responses.items():
         if trigger.lower() in message.content.lower():
             await message.channel.send(response)
