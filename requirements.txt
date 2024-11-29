@@ -3,7 +3,6 @@ wavelink
 art
 colorama
 qrcode
-discord.py-self
 aiohttp
 dhooks
 python-dateutil
