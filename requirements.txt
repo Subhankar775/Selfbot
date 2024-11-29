@@ -1,0 +1,12 @@
+requests
+wavelink
+art
+colorama
+qrcode
+discord.py
+aiohttp
+dhooks
+python-dateutil
+pytz
+PyNaCl
+flask
