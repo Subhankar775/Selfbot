@@ -1,4 +1,5 @@
 import os
+from keep_alive import keep_alive
 os.system("pip install discord.py-self")
 import sys, math
 import requests, wavelink, art, threading, io, base64, qrcode, re, json, time, colorama, datetime, traceback, qrcode, io,random, sys, urllib.parse , asyncio, aiohttp, discord, pytz
@@ -517,9 +518,8 @@ async def help(ctx, helpcategory="none"):
             description = f"""
     > # **<a:7492symbollattice:1310977804925407293> {bot_name} Auto Responder Cmds**
     > 
-    > `{prefix}cserver <target-guild> <guild-to-change>` Copy roles, channels
-    > `{prefix}cchannels <target-guild> <guild-to-change>` Copy channels
-    > `{prefix}croles <target-guild> <guild-to-change>` Copy Roles
+    > `{prefix}startautosender <channel_id> <cooldown_time> <msg>
+    > `{prefix}stopautosender <channel_id>
     """                                                     
     await ctx.send(description)
     
@@ -2771,7 +2771,7 @@ class AutoSender:
             self.loop.cancel()
 
 auto_senders = {}
-@bot.command()
+@bot.command() 
 async def startautosender(ctx, channel_id: int, cooldown_time: int, *, msg: str):
     try:
         channel = bot.get_channel(channel_id)
@@ -2805,7 +2805,6 @@ async def stopautosender(ctx, channel_id: int):
     await ctx.send(f"Stopped sending periodic messages to {channel.mention}.")
 
 
-
 ##################################
-
+keep_alive()
 bot.run(token)
