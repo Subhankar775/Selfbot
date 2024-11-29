@@ -1,7 +1,4 @@
 import os
-os.system("pip uninstall discord")
-os.system("pip uninstall discord.py")
-os.system("pip uninstall discord.py-self")
 os.system("pip install discord.py-self")
 import sys, math
 import requests, wavelink, art, threading, io, base64, qrcode, re, json, time, colorama, datetime, traceback, qrcode, io,random, sys, urllib.parse , asyncio, aiohttp, discord, pytz
