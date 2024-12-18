@@ -227,7 +227,7 @@ async def help(ctx, helpcategory="none"):
 >     <:music:1309894376440332403> music
 >     <a:7492symbollattice:1310977804925407293> autosender
 > 
-> __***Made by server.py***__
+> __***Made by s3cy.***__
 """
     elif "system" in helpcategory:
         description = f"""
